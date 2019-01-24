@@ -96,44 +96,9 @@ public class VerificationController {
 
 
     @PostMapping(value = "/record/something",consumes="application/json")
-    public ResponseEntity<?> something(@RequestBody String something){
-//       // List<AliasRecord> aliasRecords = new ArrayList<>();
-//        Set<Finger> fingers = new HashSet<>();
-//        Finger finger = new Finger(0,"random Finger");
-//        fingers.add(finger);
-//
-//        AliasRecord record = new AliasRecord("12","1222",true,"status");
-//        PersonalDetails personalDetails = new PersonalDetails("d","","","","","",
-//                        "","","","","","","",
-//                        "","34","4444","","cccc",fingers);
-//        OriginData originData = new OriginData("","","","","","","",
-//                "","","","","","","","","",
-//                "","","","","","","","");
-//        PersonalData personalData = new PersonalData("","","","","","","",
-//                "","","","","","","");
-//        NextOfKin nextOfKinData = new NextOfKin("","","","",
-//                "","","","","","","","");
-//        //set Personal Details
-//        record.setPersonalDetails(personalDetails);
-//        //set origin data
-//        record.setOriginData(originData);
-//        //set personal Data
-//        record.setPersonalData(personalData);
-//        //set nok
-//        record.setNextOfKin(nextOfKinData);
-//
-//        aliasRepository.save(record);
-//        //personalDetailsRepository.save(details);
-//       // details.setRecord(record);
-//         aliasRepository.findAll().forEach(System.out::println);
-//
-//        System.out.println("------------------------------------------------------");
-////        List<AliasRecord> mr = aliasRepository.findByPersonalDetailsTitle("Chief");
-////        mr.forEach(System.out::print);
-
-
+    public ResponseEntity<?> something(@RequestBody ReqObj something){
         String val = "Something, Something borrowed";
-        if(something.isEmpty())
+        if(something == null)
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(val,HttpStatus.OK);
 
