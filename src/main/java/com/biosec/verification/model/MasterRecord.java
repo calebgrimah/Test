@@ -1,9 +1,6 @@
 package com.biosec.verification.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 //Add table name for this class as master.
@@ -50,6 +47,7 @@ public class MasterRecord
     protected String ospokenlang;
     protected String othername;
     protected String pfirstname;
+    @Lob
     protected String photo;
     protected String pmiddlename;
     protected String profession;
