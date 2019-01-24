@@ -34,6 +34,7 @@ public class PersonalDetails {
     private String dobVerification;
     private String enrolmentType;
     private String nin;
+    @Lob
     private String photo;
 
 //    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
